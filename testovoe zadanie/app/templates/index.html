@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="container">
+<h1>Welcome, {{user.login}}!</h1>
+<div id="tree">Your folders
+	<li><a href="{{ url_for('index') }}">root</a></li>
+	{% for dir in user.dirsp %}
+	<li><a href="{{ url_for('index') }}">{{dir}}</a></li>
+	
+	{% endfor %}
+
+</div>
+<div id="content">Your files
+	{% for fl in user.flsp %}
+	<li><a href="{{ url_for('index') }}">{{fl}}</a></li>
+	{% endfor %}
+	
+	
+<form action="" method="post" enctype="multipart/form-data" name="add">
+	<hr> Choose new files <input type="file" name=file></hr>
+	<p><input type="submit" name="add" value="Upload"></p>
+</form>
+	
+</div>
+</div>
+{% endblock %}

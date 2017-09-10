@@ -1,0 +1,26 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<div id="tit"><h1>{{title}}</h1></div>
+<div id="act">
+<form action="" method="post" name="deleteacc">
+    {{form.hidden_tag()}}
+    <p>
+        Please enter your login:<br>
+        {{form.login(size=40)}}
+	{% for error in form.errors.login %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>
+        Please enter your password:<br>
+	{{form.pswd(size=40)}}  
+	{% for error in form.errors.pswd %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p><input type="submit" name="delete" value="Delete account"></p>
+</form>
+</div>
+{% endblock %}

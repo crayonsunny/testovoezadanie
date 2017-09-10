@@ -1,0 +1,47 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<div id="tit"><h1>{{title}}</h1></div>
+<div id="act">
+<form action="" method="post" name="signin">
+    {{form.hidden_tag()}}
+    <p>
+        Please enter your login:<br>
+        {{form.oldlogin(size=40)}}
+	{% for error in form.errors.oldlogin %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>
+        Please enter your new login:<br>
+        {{form.renewlogin(size=40)}}
+	{% for error in form.errors.renewlogin %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>
+        Please enter your new email:<br>
+        {{form.renewemail(size=40)}}
+	{% for error in form.errors.renewemail %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>
+        Please enter your new password:<br>
+	{{form.renewpswd(size=40)}}  
+	{% for error in form.errors.renewpswd %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p>
+        Please repeat your new password:<br>
+        {{form.renewconfirm(size=40)}}
+	{% for error in form.errors.renewconfirm %}
+        <span style="color: red;">[{{error}}]</span>
+        {% endfor %}<br>
+    </p>
+    <p><input type="submit" value="Renew"></p>
+</form>
+</div>
+{% endblock %}

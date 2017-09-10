@@ -1,0 +1,25 @@
+#navigator  { background: #66CDAA; font-family: chicago; width: 95%;               height: 2em;  margin: 1em auto; font-size: 1.2em; }
+#tree       { background: #98FB98; font-family: chicago; font-size: 1.2em;               margin: 0.5em; float: left; width: 28%; height: 28em; }
+#content    { background: #FFDAB9;font-family: chicago; font-size:                       1.2em; margin: 0.5em; float: right; width: 68%; height:                    28em;}
+#container  { font-family: chicago; background: #FFFFFF; margin: 1em auto;               width: 95%; }
+#act, #tit  { font-family: chicago; margin: 2em; }
+TABLE {
+	margin: 0.5em;
+    width: 25em; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+   }
+TD, TH {
+    padding: 0.5em; /* Поля вокруг содержимого таблицы */
+    border: 0.1em solid black; /* Параметры рамки */
+   }
+TH {
+    background: #F08080; /* Цвет фона */
+   }
+ 
+
+title		{ font-family: chicago; font-size: 1.2em; margin: 1em auto }
+body            { font-family: chicago; }
+a               { color: #377BA8; }
+h1, h2          { font-family: 'Georgia', serif; margin: 0; }
+h1              { border-bottom: 0.2em solid #eee; }
+h2              { font-size: 1.2em; }
